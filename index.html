@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Inlet Spillway Calculator</title>
+    <link rel="stylesheet" type="text/css" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Box Inlet Spillway Calculator</h1>
+        <form id="spillwayForm">
+            <label for="Qg">Runoff collected from catchment area (m<sup>3</sup>/s):</label>
+            <input type="number" id="Qg" name="Qg" step="any"><br><br>
+            <label for="B">B (m):</label>
+            <input type="number" id="B" name="B" step="any"><br><br>
+            <label for="W">Width at the upstream end:</label>
+            <input type="number" id="W" name="W" step="any"><br><br>
+            <label for="We">Width at the end sill:</label>
+            <input type="number" id="We" name="We" step="any"><br><br>
+            <input type="submit" value="Calculate">
+        </form>
+        <div id="result" style="display: none;">
+            <h2>Result:</h2>
+            <p>Critical depth at straight section: <span id="Dc"></span></p>
+            <p>Critical depth at end sill: <span id="Dce"></span></p>
+            <p>Length of straight section: <span id="Ls"></span></p>
+            <p>Length of basin section: <span id="Lb"></span></p>
+            <p>Tail Water Depth: <span id="d2"></span></p>
+            <p>Height of end sill and longitudinal sill: <span id="F"></span></p>
+            <p>Number of longitudinal Sills: <span id="numSills"></span></p>
+            <p>Spacing between longitudinal sills: <span id="P"></span></p>
+            <p>Height of side wall above tail water Depth: <span id="t"></span></p>
+        </div>
+    </div>
+    <script src="./box inlet.js"></script>
+    
+
+</body>
+</html>
